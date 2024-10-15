@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRATIK || Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff7f7;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: #ccc;
+        }
+
+        /* Intro section */
+        .intro {
+            background: url('./images/bg1.png') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fcf2f2;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+            background-color: rgba(0, 0, 0, 0.6);
+            background-blend-mode: darken;
+        }
+
+        .intro h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        .intro p {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        /* Define keyframes for fade-in and slide-up effect */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .resume-button {
+            background-color: #f2e1e1;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #070606;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .resume-button:hover {
+            background-color: #070606;
+            color: #f2e1e1;
+        }
+
+        /* Skills section */
+        .skills {
+            padding: 50px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .skills h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .skills ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        .skills ul li {
+            margin: 0 15px;
+            font-size: 1.5rem;
+        }
+
+        /* Brand banner strip */
+        .brands {
+            padding: 20px;
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .brands img {
+            height: 50px;
+            width: auto;
+            margin: 0 15px;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease-in-out;
+            background-color: transparent;
+        }
+
+        .brands img:hover {
+            filter: none;
+            opacity: 1;
+        }
+
+        /* Project section */
+        .projects {
+            padding: 50px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .projects h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .projects ul {
+            list-style: none;
+        }
+
+        .projects ul li {
+            margin: 20px 0;
+        }
+
+        .projects ul li a {
+            font-size: 1.2rem;
+            color: #111010;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .projects ul li a:hover {
+            color: #555;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px; /* Increased padding for more space */
+            margin-top: 20px; /* Optional: add margin to the top for space from previous sections */
+        }
+
+        .footer p {
+    margin-bottom: 20px; /* Add margin to create space between the paragraph and links */
+}
+
+        .footer a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Scrolling effects */
+        .scroll-effect {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .scroll-effect.visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">Nova Sei</div>
+        <ul>
+            <li><a href="#intro">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Intro section -->
+    <section class="intro" id="intro">
+        <h1>Welcome to My Portfolio</h1>
+        <p>"I'd rather regret doing something than regret not doing something." - Shikamaru Nara</p>
+        <a href="./Pratik Yadav -Resume.pdf" class="resume-button" download>Download Resume</a>
+    </section>
+
+    <!-- Skills section -->
+    <section class="skills" id="skills">
+        <h2>My Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Figma</li>
+        </ul>
+    </section>
+
+    <!-- Brand banner strip -->
+    <section class="brands">
+        <img src="./images/sparx.png" alt="Sparx">
+        <img src="./images/nike.png" alt="Nike">
+        <img src="./images/jordan.png" alt="Jordan">
+        <img src="./images/lenovo.png" alt="Lenovo">
+    </section>
+
+    <!-- Project section -->
+    <section class="projects" id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><a href="https://pratik-webdepth.github.io/GSAP/">GSAP Practice</a></li>
+            <li><a href="https://pratik-webdepth.github.io/NARA/">Fav Frictional Char...</a></li>
+            <li><a href="https://pratik-webdepth.github.io/Amazon-Clone/">Amazon Clone</a></li>
+            <li><a href="https://pratik-webdepth.github.io/Blue-Fashion/">Blue Fashion</a></li>
+            <li><a href="https://pratik-webdepth.github.io/Nike/">Nike Banner</a></li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <p>Connect with me on:</p>
+        <a href="https://instagram.com/meet_.pratik" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/in/yadav-pratik/" target="_blank">LinkedIn</a>
+        <a href="https://www.youtube.com/@newlife-yt" target="_blank">YouTube</a>
+    </footer>
+
+    <script>
+        // Add scrolling effect JS
+        const elements = document.querySelectorAll('.scroll-effect');
+        window.addEventListener('scroll', () => {
+            elements.forEach(el => {
+                const pos = el.getBoundingClientRect().top;
+                if (pos < window.innerHeight) {
+                    el.classList.add('visible');
+                }
+            });
+        });
+
+        // Smooth scrolling effect
+        document.querySelectorAll('.navbar a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
